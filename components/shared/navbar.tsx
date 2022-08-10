@@ -67,7 +67,7 @@ export const NavBar: FunctionComponent = () => {
 
    return (
       <div className={classes.navBar}>
-         <Link href='/about' passHref>
+         <Link href='/' passHref>
             <a>
                <Image
                   alt='logo'
