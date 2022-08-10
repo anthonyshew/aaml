@@ -1,7 +1,7 @@
 import { Button, Center, Space, Text, Title } from '@mantine/core'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
-import { useStyles } from '../styles/home'
+import { useStyles } from '../../styles/home'
 
 export const OurBlog: FunctionComponent = () => {
    const { classes } = useStyles()

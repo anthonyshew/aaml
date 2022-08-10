@@ -1,11 +1,11 @@
-import { Center, NavLink, SimpleGrid, Space, Text, Title, useMantineTheme } from '@mantine/core'
+import { SimpleGrid, Space, Text, Title, useMantineTheme } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { IconBrandFacebook, IconBrandInstagram, IconBrandTwitter } from '@tabler/icons'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { FunctionComponent } from 'react'
-import { useStyles } from '../styles/home'
+import { useStyles } from '../../styles/home'
 
 interface Props {
    href: string

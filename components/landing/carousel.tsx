@@ -1,6 +1,6 @@
 import { Carousel } from '@mantine/carousel'
-import { Center, Space, Text, Title, useMantineTheme } from '@mantine/core'
-import { useMediaQuery, useViewportSize } from '@mantine/hooks'
+import { Center, Space, Text, Title } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import Image from 'next/image'
 import { FunctionComponent } from 'react'
 

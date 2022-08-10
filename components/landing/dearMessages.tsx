@@ -1,7 +1,7 @@
 import { Button, SimpleGrid, Stack, Text, Title, useMantineTheme } from '@mantine/core'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
-import { useStyles } from '../styles/home'
+import { useStyles } from '../../styles/home'
 
 export const DearMessages: FunctionComponent = () => {
    const { classes } = useStyles()

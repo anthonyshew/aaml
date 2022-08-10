@@ -2,7 +2,7 @@ import { Button, Center, Space, Text, Title } from '@mantine/core'
 import { IconArrowRight } from '@tabler/icons'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
-import { useStyles } from '../styles/home'
+import { useStyles } from '../../styles/home'
 
 export const Media: FunctionComponent = () => {
    const { classes } = useStyles()

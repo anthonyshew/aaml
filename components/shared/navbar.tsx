@@ -3,9 +3,8 @@ import { useMediaQuery } from '@mantine/hooks'
 import { IconBrandInstagram, IconBrandTwitter, IconBrandFacebook } from '@tabler/icons'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { FunctionComponent, useState } from 'react'
-import { useStyles } from '../styles/home'
+import { useStyles } from '../../styles/home'
 
 interface Props {
    // Url that will it will route to when clicked

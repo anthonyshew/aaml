@@ -4,7 +4,7 @@ import { IconArrowRight } from '@tabler/icons'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
-import { useStyles } from '../styles/home'
+import { useStyles } from '../../styles/home'
 
 export const OurSponsors: FunctionComponent = () => {
    const { classes } = useStyles()

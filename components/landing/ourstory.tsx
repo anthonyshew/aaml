@@ -3,7 +3,7 @@ import { useMediaQuery } from '@mantine/hooks'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CSSProperties, FunctionComponent } from 'react'
-import { useStyles } from '../styles/home'
+import { useStyles } from '../../styles/home'
 
 interface IconBoxProps {
    src: string
