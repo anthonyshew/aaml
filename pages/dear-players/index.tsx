@@ -167,11 +167,17 @@ const DearPlayers: NextPage = () => {
                   >
                      <SimpleGrid cols={1}>
                         <Title align='center'>Player Sign Up Form</Title>
-                        <MantineTextInput required label='First Name' {...form.getInputProps('first')} />
-                        <MantineTextInput required label='Last Name' {...form.getInputProps('last')} />
+                        <MantineTextInput required type='text' label='First Name' {...form.getInputProps('first')} />
+                        <MantineTextInput required type='text' label='Last Name' {...form.getInputProps('last')} />
                         <MantineSelect data={TEAMS} required label='Organization' {...form.getInputProps('org')} />
-                        <MantineTextInput required label='Email' {...form.getInputProps('email')} />
-                        <MantineTextInput required label='Phone Number' {...form.getInputProps('phone')} />
+                        <MantineTextInput required type='email' label='Email' {...form.getInputProps('email')} />
+                        <MantineTextInput
+                           required
+                           type='tel'
+                           pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
+                           label='Phone Number'
+                           {...form.getInputProps('phone')}
+                        />
 
                         <Button type='submit' radius='lg' size='lg' className={classes.formButton}>
                            Submit
