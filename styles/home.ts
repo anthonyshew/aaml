@@ -130,6 +130,7 @@ export const useStyles = createStyles((theme) => ({
     // footer
     footer: {
         backgroundColor: theme.colors.red,
+        color: theme.colors.navy,
         minHeight: '300px',
         padding: '10px',
         width: '100%',
