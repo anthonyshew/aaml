@@ -37,6 +37,7 @@ const FooterNavLink: FunctionComponent<Props> = ({ href, label, active }) => {
 export const Footer: FunctionComponent = () => {
    const { classes } = useStyles()
    const { pathname } = useRouter()
+   const theme = useMantineTheme()
    const smallScreen = useMediaQuery('(max-width: 800px)', false)
 
    return (
@@ -82,7 +83,7 @@ export const Footer: FunctionComponent = () => {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-               <Title>Connect With Us!</Title>
+               <Title color={theme.colors.navy as any}>Connect With Us!</Title>
                <Space h='xl' />
                <div style={{ display: 'flex', flexDirection: 'row' }}>
                   <Link href='https://facebook.com/groups/218122932877473/' passHref>
@@ -117,7 +118,9 @@ export const Footer: FunctionComponent = () => {
             >
                <Image src='/AaML-logo.png' alt='AaMLlogo' layout='fixed' height='150px' width='150px' />
                <Space h='xl' />
-               <Title order={2}>#StandWithMiLB</Title>
+               <Title color={theme.colors.navy as any} order={2}>
+                  #StandWithMiLB
+               </Title>
             </div>
          </SimpleGrid>
       </div>
