@@ -1,12 +1,7 @@
-import { Center, Container, createStyles, Grid, Text, Title } from '@mantine/core'
-import { useMediaQuery } from '@mantine/hooks'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import { Component } from 'react'
 import { Landing } from '../components/landing'
 import { useStyles } from '../styles/home'
-import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
    const { classes } = useStyles()

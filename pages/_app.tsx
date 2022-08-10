@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
          theme={{
             fontFamily: 'Raleway, sans-serif',
             headings: { fontFamily: 'Raleway, sans-serif' },
-            colors: { navy: '#00235b', orange: '#f39116' },
+            colors: { navy: '#00235b' as any, orange: '#f39116' as any },
          }}
       >
          <Component {...pageProps} />
