@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { Footer } from '../../components/shared/footer'
 import { NavBar } from '../../components/shared/navbar'
 import { dearPlayersStyles } from '../../styles/dear-players'
-import { BusinessCard } from './businessCard'
+import { BusinessCard } from '../../components/businessCard'
 
 const BusinessSponsors: NextPage = () => {
    const { classes } = dearPlayersStyles()

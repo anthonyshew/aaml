@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
 import { Url } from 'url'
-import { businessSponsors } from '../../styles/businessSponsors'
+import { businessSponsors } from '../styles/businessSponsors'
 
 interface CardProps {
    /* Title of card. */
