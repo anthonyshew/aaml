@@ -1,0 +1,47 @@
+name: Build and Test
+
+on:
+  pull_request:
+    - main
+
+jobs:
+   install:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Checkout
+           uses: actions/checkout@v3
+
+         - name: Cypress install
+           uses: cypress-io/github-action@v4
+           with:
+              # Disable running of tests within install job
+              runTests: false
+              build: yarn build
+
+         - name: Save build folder
+           uses: actions/upload-artifact@v3
+           with:
+              name: build
+              if-no-files-found: error
+              path: .next
+
+   cypress-run:
+      needs: install
+      runs-on: ubuntu-latest
+      steps:
+         - name: Checkout
+           uses: actions/checkout@v3
+
+         - name: Download the build folders
+           uses: actions/download-artifact@v2
+           with:
+              name: build
+              path: .next
+
+           # Install NPM dependencies, cache them correctly
+           # and run all Cypress tests
+         - name: Cypress run
+           uses: cypress-io/github-action@v4
+           with:
+              start: yarn start
+              test: yarn cy:headless
