@@ -85,16 +85,16 @@ export const NavBar: FunctionComponent = () => {
          {!smallScreen && (
             <SimpleGrid cols={2}>
                <NavBarLink href='/dear-players' text='Dear Players' cytest='dear-players' />
-               <NavBarLink href='/about-us' text='About Us' />
+               <NavBarLink href='/about-us' text='About Us' cytest='about-us' />
                <NavBarLink
                   href='https://promotionsetc.commonsku.com/shop/e5be5b9c-b850-4648-9d5f-830033b386b2'
                   text='Shop'
                />
                <NavBarLink href='/dear-sponsors' text='Dear Sponsors' cytest='dear-sponsors' />
-               <NavBarLink href='/blog' text='Blog' />
+               <NavBarLink href='/blog' text='Blog' cytest='blog' />
 
                <Link href='/donate' passHref>
-                  <Button component='a' className={classes.navButton} radius='md'>
+                  <Button component='a' className={classes.navButton} radius='md' cy-test='donate'>
                      Donate
                   </Button>
                </Link>
