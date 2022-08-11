@@ -11,12 +11,13 @@ interface Props {
    href: string
    // Text that you want the link to display
    text?: string
+   cytest?: string
 }
 
-const NavBarLink: FunctionComponent<Props> = ({ href, text }) => {
+const NavBarLink: FunctionComponent<Props> = ({ href, text, cytest }) => {
    return (
       <Link href={href} passHref>
-         <a style={{ textDecoration: 'none' }}>
+         <a style={{ textDecoration: 'none' }} cy-test={cytest}>
             <Title order={3} sx={(theme) => ({ color: theme.colors.navy })}>
                {text}
             </Title>
@@ -83,13 +84,13 @@ export const NavBar: FunctionComponent = () => {
 
          {!smallScreen && (
             <SimpleGrid cols={2}>
-               <NavBarLink href='/dear-players' text='Dear Players' />
+               <NavBarLink href='/dear-players' text='Dear Players' cytest='dear-players' />
                <NavBarLink href='/about-us' text='About Us' />
                <NavBarLink
                   href='https://promotionsetc.commonsku.com/shop/e5be5b9c-b850-4648-9d5f-830033b386b2'
                   text='Shop'
                />
-               <NavBarLink href='/dear-sponsors' text='Dear Sponsors' />
+               <NavBarLink href='/dear-sponsors' text='Dear Sponsors' cytest='dear-sponsors' />
                <NavBarLink href='/blog' text='Blog' />
 
                <Link href='/donate' passHref>

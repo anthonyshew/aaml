@@ -15,7 +15,7 @@ describe('Navigation', () => {
     cy.visit('http://localhost:3000/')
 
     // Find a link with an href attribute containing "about" and click it
-    cy.get('a[href*="dear-players"]').click({multiple: true})
+    cy.get("[cy-test='dear-players']").click()
 
     // The new url should include "/dear-players"
     cy.url().should('include', '/dear-players')
@@ -29,7 +29,7 @@ describe('Navigation', () => {
     cy.visit('http://localhost:3000/')
 
     // Find a link with an href attribute containing "dear-sponsors" and click it
-    cy.get('a[href*="dear-sponsors"]').click({multiple: true})
+    cy.get("[cy-test='dear-sponsors']").click()
 
     // The new url should include "/dear-sponsors"
     cy.url().should('include', '/dear-sponsors')
