@@ -7,9 +7,8 @@
       "build": "next build",
       "start": "next start",
       "lint": "next lint",
-      "cy": "cypress open",
       "cy:headless": "cypress run",
-      "test": "start-server-and-test start http://localhost:3030 cy:headless"
+      "test": "start-server-and-test start http://localhost:3000 cy:headless"
    },
    "dependencies": {
       "@emotion/react": "^11.10.0",
