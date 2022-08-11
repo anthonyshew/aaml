@@ -11,14 +11,15 @@ interface Props {
    href: string
    label?: string
    active?: boolean
+   cytest?: string
 }
 
-const FooterNavLink: FunctionComponent<Props> = ({ href, label, active }) => {
+const FooterNavLink: FunctionComponent<Props> = ({ href, label, active, cytest }) => {
    const theme = useMantineTheme()
 
    return (
       <Link href={href} passHref>
-         <a style={{ textDecoration: 'none' }}>
+         <a style={{ textDecoration: 'none' }} cy-test={cytest}>
             <Text
                sx={{
                   color: active ? theme.colors.orange : theme.colors.navy,
@@ -59,6 +60,7 @@ export const Footer: FunctionComponent = () => {
                      href='/business-sponsors'
                      label='Business Sponsors'
                      active={pathname === '/business-sponsors'}
+                     cytest={'business-sponsors'}
                   />
                   <FooterNavLink
                      href='https://promotionsetc.commonsku.com/shop/e5be5b9c-b850-4648-9d5f-830033b386b2'
