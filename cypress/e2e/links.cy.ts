@@ -7,3 +7,5 @@ describe("Navigate Externally", () => {
         cy.get('a[href*="https://www.instagram.com/adoptanmilbplayer/"]')
     })
 })
+
+export {}

@@ -38,3 +38,5 @@ describe('Navigation', () => {
     cy.get('h1').should('contain', 'Dear Sponsors,')
   })
 })
+
+export {}
