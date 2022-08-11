@@ -5,10 +5,9 @@ on: [push]
 jobs:
    install:
       runs-on: ubuntu-latest
-      container: cypress/browsers:node12.18.3-chrome87-ff82
       steps:
          - name: Checkout
-           uses: actions/checkout@v2
+           uses: actions/checkout@v3
 
          - name: Cypress install
            uses: cypress-io/github-action@v4
@@ -18,7 +17,7 @@ jobs:
               build: yarn build
 
          - name: Save build folder
-           uses: actions/upload-artifact@v2
+           uses: actions/upload-artifact@v3
            with:
               name: build
               if-no-files-found: error
@@ -27,7 +26,6 @@ jobs:
    cypress-run:
       needs: install
       runs-on: ubuntu-latest
-      container: cypress/browsers:node12.18.3-chrome87-ff82
       steps:
          - name: Checkout
            uses: actions/checkout@v3
