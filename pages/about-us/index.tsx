@@ -28,7 +28,7 @@ export const AboutUs: NextPage = () => {
                <Title align={bigScreen ? 'left' : 'center'} order={2}>
                   Mission Statement
                </Title>
-               <Text className='statement-text'>
+               <Text align={bigScreen ? 'left' : 'center'} className='statement-text'>
                   To make the lives of minor league baseball players more fulfilling.
                </Text>
 
