@@ -51,6 +51,19 @@ describe('Navigation', () => {
     // The new page should contain an h1 with "Our Business Sponsors"
     cy.get('h1').should('contain', 'Our Business Sponsors')
   })
+
+  it('should navigate to the about-us page', () => {
+    cy.visit('http://localhost:3000/')
+
+    // Find a link with an href attribute containing "about-us" and click it
+    cy.get("[cy-test='about-us']").click()
+
+    // The new url should include "/about-us"
+    cy.url().should('include', '/about-us')
+
+    // The new page should contain an h1 with "About Us"
+    cy.get('h1').should('contain', 'About Us')
+  })
 })
 
 export {}
